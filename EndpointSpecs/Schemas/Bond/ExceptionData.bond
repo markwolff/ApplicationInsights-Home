@@ -29,8 +29,4 @@ struct ExceptionData
     [Description("Collection of custom measurements.")]
     [MaxKeyLength("150")]
     200: map<string, double> 	 measurements;
-
-    [MaxStringLength("128")]
-    [Description("Identifier of a page view instance. Used for correlation between page view and other telemetry items.")]
-    210: required string 	 id;
 }
