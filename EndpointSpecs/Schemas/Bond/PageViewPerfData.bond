@@ -26,4 +26,8 @@ struct PageViewPerfData
     [Description("DOM processing time in TimeSpan 'G' (general long) format: d:hh:mm:ss.fffffff")]
     [CSType("TimeSpan")]
     50: string 	 domProcessing;
+
+    [MaxStringLength("128")]
+    [Description("Identifier of a page view instance. Used for correlation between page view and other telemetry items.")]
+    60: string 	 id;
 }
