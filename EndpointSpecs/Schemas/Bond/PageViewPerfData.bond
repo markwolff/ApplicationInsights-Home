@@ -10,21 +10,24 @@ struct PageViewPerfData
     [Description("Performance total in TimeSpan 'G' (general long) format: d:hh:mm:ss.fffffff")]
     [CSType("TimeSpan")]
     10: string 	 perfTotal;
-    
+
     [Description("Network connection time in TimeSpan 'G' (general long) format: d:hh:mm:ss.fffffff")]
     [CSType("TimeSpan")]
     20: string 	 networkConnect;
-    
+
     [Description("Sent request time in TimeSpan 'G' (general long) format: d:hh:mm:ss.fffffff")]
     [CSType("TimeSpan")]
     30: string 	 sentRequest;
-    
+
     [Description("Received response time in TimeSpan 'G' (general long) format: d:hh:mm:ss.fffffff")]
     [CSType("TimeSpan")]
     40: string 	 receivedResponse;
-    
+
     [Description("DOM processing time in TimeSpan 'G' (general long) format: d:hh:mm:ss.fffffff")]
     [CSType("TimeSpan")]
     50: string 	 domProcessing;
-    
+
+    [MaxStringLength("128")]
+    [Description("Identifier of a page view instance. Used for correlation between page view and other telemetry items.")]
+    60: string 	 id;
 }
